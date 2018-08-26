@@ -2,31 +2,18 @@
 var capture;
 var pixR,pixG,pixB,pixA;
 function setup() {
-  createCanvas(screen.width, screen.height);
   capture = createCapture(VIDEO);
-  capture.size(screen.width, screen.height);
+  createCanvas(500, 800);
   capture.hide();
 }
 
 function draw() {
+    desenhaPixelDaCam(round(random(capture.width)), round(random(capture.height)));
 }
 
-function mousePressed() {
-  for (let i = -5; i < 5; i++) {
-    for (let j = -5; j < 5; j++) {
-      desenhaPixelDaCam(mouseX + i*20 , mouseY + j*10 );
-    }
-  }
-}
-function touchStarted() {
-  for (let i = -5; i < 5; i++) {
-    for (let j = -5; j < 5; j++) {
-      desenhaPixelDaCam(i*20 , j*10 );
-    }
-  }
-}
 
 function desenhaPixelDaCam(x, y) {
+  console.log(x,y);
   capture.loadPixels();
   index =  (x + y*capture.width)*4;
   pixR = capture.pixels[index];
