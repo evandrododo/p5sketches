@@ -2,26 +2,18 @@
 var capture;
 var pixR,pixG,pixB,pixA;
 function setup() {
-  createCanvas(screen.width, screen.height);
+  createCanvas(1024, 768);
   capture = createCapture(VIDEO);
-  capture.size(screen.width, screen.height);
+  capture.size(1024, 768);
   capture.hide();
 }
 
 function draw() {
 }
-
-function mousePressed() {
-  for (let i = -5; i < 5; i++) {
-    for (let j = -5; j < 5; j++) {
-      desenhaPixelDaCam(mouseX + i*20 , mouseY + j*10 );
-    }
-  }
-}
 function touchStarted() {
   for (let i = -5; i < 5; i++) {
     for (let j = -5; j < 5; j++) {
-      desenhaPixelDaCam(touchX + i*20 , touchY + j*10 );
+      desenhaPixelDaCam(mouseX + i*20 , mouseY + j*10 );
     }
   }
 }
