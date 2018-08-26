@@ -21,7 +21,7 @@ function mousePressed() {
 function touchStarted() {
   for (let i = -5; i < 5; i++) {
     for (let j = -5; j < 5; j++) {
-      desenhaPixelDaCam(touchX + i*20 , touchY + j*10 );
+      desenhaPixelDaCam(i*20 , j*10 );
     }
   }
 }
