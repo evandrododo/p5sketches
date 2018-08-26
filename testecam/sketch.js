@@ -23,6 +23,6 @@ function desenhaPixelDaCam(x, y) {
   capture.updatePixels();
   stroke(pixR,pixG,pixB, pixA);
   fill(pixR,pixG,pixB, pixA);
-  pixSize = random(10);
+  pixSize = random(10)*10;
   rect(x, y, pixSize, pixSize);
 }
