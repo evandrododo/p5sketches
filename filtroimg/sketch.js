@@ -3,7 +3,7 @@ var capture;
 var img = false;
 function setup() {
   var uploadBtn = createFileInput(imageUpload);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth -5, windowHeight -5);
 
   background(30);
 }
@@ -31,5 +31,5 @@ function imageUpload(file){
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  //resizeCanvas(windowWidth, windowHeight);
 }
