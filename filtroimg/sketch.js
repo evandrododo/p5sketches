@@ -26,10 +26,10 @@ function desenhaPixelDaImg(x, y) {
 
 function imageUpload(file){
     img = loadImage(file.data,function(){
+      resizeCanvas(img.width, img.height);
     })
     
 }
 
 function windowResized() {
-  //resizeCanvas(windowWidth, windowHeight);
 }
