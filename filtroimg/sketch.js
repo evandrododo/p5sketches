@@ -10,8 +10,12 @@ function setup() {
 
 function draw() {
 
-    if(img)
+    if(img) {
         desenhaPixelDaImg(round(random(img.width)), round(random(img.height)));
+        desenhaPixelDaImg(round(random(img.width)), round(random(img.height)));
+        desenhaPixelDaImg(round(random(img.width)), round(random(img.height)));
+        desenhaPixelDaImg(round(random(img.width)), round(random(img.height)));
+    }
 }
 
 
@@ -19,7 +23,7 @@ function desenhaPixelDaImg(x, y) {
   pix = img.get(x,y);
 
   stroke(pix);
-  fill(pix);
+  fill(0,0);
   pixSize = floor(random(10)* (frameCount > 10000 ? 0.5 : 20000/frameCount)) ;
   rect(x, y, pixSize, pixSize);
 }
